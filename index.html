@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Campus AI System</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #121a2b;
+      --text: #e8eef8;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dim: rgba(56, 189, 248, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(ellipse 120% 80% at 50% -20%, #1e3a5f 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.125rem;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    code {
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 0.85em;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="badge">Build <code>MM-E13CF4A9</code></p>
+      <h1>Smart Campus AI System</h1>
+      <p class="lead">
+        Campus intelligence, meetings, and automation—starting here with a clean landing experience.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>What’s next</h2>
+      <p>
+        This release tracks ticket <strong>MM-E13CF4A9</strong>: public landing page and repository refresh.
+        Open <code>index.html</code> in a browser or host it on any static file server.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Repository</h2>
+      <p>
+        Source: <a href="https://github.com/Chinmayibt/SmartCampusAISystem" style="color: var(--accent);">SmartCampusAISystem on GitHub</a>
+      </p>
+    </section>
+
+    <footer>
+      <span>MM-E13CF4A9 · Smart Campus AI System</span>
+    </footer>
+  </div>
+</body>
+</html>

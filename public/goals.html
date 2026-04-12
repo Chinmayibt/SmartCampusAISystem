@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goals — SmartStudy Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/timetable.html">Timetable</a>
+        <a href="/tasks.html">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html">Focus</a>
+        <a href="/goals.html" aria-current="page">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Weekly goals</h2>
+      <p class="task-meta" id="goals-week-label"></p>
+      <p class="task-meta">Saved only in this browser (localStorage), not on the server.</p>
+
+      <form id="goals-form" class="grid card" style="max-width: 28rem">
+        <label>
+          Target study minutes this week
+          <input type="number" id="minutesTarget" min="0" max="10000" placeholder="e.g. 300" />
+        </label>
+        <label>
+          Target tasks to complete this week
+          <input type="number" id="tasksTarget" min="0" max="500" placeholder="e.g. 5" />
+        </label>
+        <label>
+          Notes
+          <textarea id="goals-note" placeholder="Focus areas, deadlines…"></textarea>
+        </label>
+        <button type="submit">Save goals</button>
+        <p id="goals-msg" class="task-meta" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="/js/goals.js"></script>
+  </body>
+</html>

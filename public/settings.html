@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings — SmartStudy Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/timetable.html">Timetable</a>
+        <a href="/tasks.html">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html" aria-current="page">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html">Focus</a>
+        <a href="/goals.html">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Study suggestions</h2>
+      <p class="task-meta">
+        Used to find free gaps in your timetable and suggest session times.
+      </p>
+      <form id="prefs-form" class="grid card" style="max-width: 22rem">
+        <label>
+          Session length (minutes)
+          <input type="number" id="sessionLengthMin" min="5" max="240" required />
+        </label>
+        <label>
+          Earliest study hour (0–23)
+          <input type="number" id="dayStartHour" min="0" max="23" required />
+        </label>
+        <label>
+          Latest study hour end (1–24)
+          <input type="number" id="dayEndHour" min="1" max="24" required />
+        </label>
+        <button type="submit">Save</button>
+        <p id="prefs-msg" class="task-meta" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="/js/api.js"></script>
+    <script src="/js/settings.js"></script>
+  </body>
+</html>

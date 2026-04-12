@@ -1,0 +1,12 @@
+{
+  "name": "smartstudy-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal SmartStudy Planner prototype",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

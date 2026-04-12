@@ -1,0 +1,5 @@
+node_modules/
+data/store.json
+
+# Local merge-demo clone (separate git history; already pushed as its own branches)
+smartcampus-merge-demo/

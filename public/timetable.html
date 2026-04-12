@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable — SmartStudy Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/timetable.html" aria-current="page">Timetable</a>
+        <a href="/tasks.html">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html">Focus</a>
+        <a href="/goals.html">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Add or edit block</h2>
+      <form id="block-form" class="grid card" style="max-width: 28rem">
+        <input type="hidden" id="edit-id" value="" />
+        <label>
+          Weekday
+          <select id="weekday" required></select>
+        </label>
+        <label>
+          Start (HH:MM)
+          <input type="time" id="start" required />
+        </label>
+        <label>
+          End (HH:MM)
+          <input type="time" id="end" required />
+        </label>
+        <label>
+          Label
+          <input type="text" id="label" placeholder="e.g. Math" required />
+        </label>
+        <div class="row-actions">
+          <button type="submit" id="submit-btn">Add block</button>
+          <button type="button" class="secondary" id="cancel-edit" hidden>Cancel edit</button>
+        </div>
+      </form>
+
+      <h2>Suggestions for selected day</h2>
+      <label style="max-width: 12rem">
+        Day
+        <select id="suggest-day"></select>
+      </label>
+      <div id="suggestions-panel" class="card" style="margin-top: 0.75rem"></div>
+
+      <h2>Weekly overview</h2>
+      <div id="week-grid" class="week-grid"></div>
+    </main>
+    <script src="/js/api.js"></script>
+    <script src="/js/timetable.js"></script>
+  </body>
+</html>

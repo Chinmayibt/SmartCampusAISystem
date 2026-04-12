@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus — SmartStudy Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/timetable.html">Timetable</a>
+        <a href="/tasks.html">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html" aria-current="page">Focus</a>
+        <a href="/goals.html">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Focus timer</h2>
+      <p class="task-meta">Runs only in this tab — not saved to the server.</p>
+
+      <div class="card focus-panel">
+        <p id="focus-phase" class="focus-phase">Ready</p>
+        <p id="focus-display" class="focus-display" aria-live="polite">25:00</p>
+        <div class="row-actions focus-controls">
+          <label>
+            Work (min)
+            <input type="number" id="focus-work" min="1" max="120" value="25" />
+          </label>
+          <label>
+            Break (min)
+            <input type="number" id="focus-break" min="1" max="60" value="5" />
+          </label>
+        </div>
+        <div class="row-actions">
+          <button type="button" id="focus-start">Start</button>
+          <button type="button" class="secondary" id="focus-pause" disabled>Pause</button>
+          <button type="button" class="secondary" id="focus-reset">Reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="/js/focus.js"></script>
+  </body>
+</html>

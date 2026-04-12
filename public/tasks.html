@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks — SmartStudy Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/timetable.html">Timetable</a>
+        <a href="/tasks.html" aria-current="page">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html">Focus</a>
+        <a href="/goals.html">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>New task</h2>
+      <form id="task-form" class="grid card" style="max-width: 28rem">
+        <input type="hidden" id="edit-id" value="" />
+        <label>
+          Title
+          <input type="text" id="title" required />
+        </label>
+        <label>
+          Type
+          <select id="kind">
+            <option value="assignment">Assignment</option>
+            <option value="exam">Exam</option>
+          </select>
+        </label>
+        <label>
+          Due
+          <input type="datetime-local" id="dueAt" required />
+        </label>
+        <label>
+          Remind at (optional)
+          <input type="datetime-local" id="remindAt" />
+        </label>
+        <label>
+          Notes
+          <textarea id="notes"></textarea>
+        </label>
+        <div class="row-actions">
+          <button type="submit" id="submit-btn">Add task</button>
+          <button type="button" class="secondary" id="cancel-edit" hidden>Cancel edit</button>
+        </div>
+      </form>
+
+      <h2>All tasks</h2>
+      <div id="task-list" class="card"></div>
+    </main>
+    <script src="/js/api.js"></script>
+    <script src="/js/tasks.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — SmartStudy Planner</title>
+    <!-- MERGE_MARKER -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a href="/">SmartStudy Planner</a></h1>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/dashboard.html" aria-current="page">Dashboard</a>
+        <a href="/timetable.html">Timetable</a>
+        <a href="/tasks.html">Tasks</a>
+        <a href="/progress.html">Progress</a>
+        <a href="/settings.html">Settings</a>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <a href="/about.html">About</a>
+        <a href="/help.html">Help</a>
+        <a href="/focus.html">Focus</a>
+        <a href="/goals.html">Goals</a>
+        <a href="/tips.html">Tips</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Reminders &amp; due</h2>
+      <div id="reminder-panel"></div>
+      <p>
+        <button type="button" id="btn-notify" class="secondary">
+          Enable browser notifications
+        </button>
+        <span id="notify-status" class="task-meta"></span>
+      </p>
+
+      <h2>Suggested study slots</h2>
+      <p class="task-meta">
+        Based on your timetable gaps and session length in Settings.
+      </p>
+      <label style="max-width: 12rem">
+        Day
+        <select id="suggest-day"></select>
+      </label>
+      <div id="suggestions-panel" class="card" style="margin-top: 0.75rem"></div>
+
+      <h2>Upcoming tasks</h2>
+      <div id="tasks-panel" class="card"></div>
+    </main>
+    <script src="/js/api.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>
